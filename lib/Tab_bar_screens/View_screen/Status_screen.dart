@@ -32,29 +32,29 @@ class _Status_screenState extends State<Status_screen> {
             color: Colors.black87,
             child: ListTile(
               leading: Stack(
-                alignment: Alignment(1,1),
-                children: [Container(
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+                  alignment: Alignment(1,1),
+                  children: [Container(
+                    height: 70,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/image/mydp.png"),
+                    ),
                   ),
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage("assets/image/mydp.png"),
-                  ),
-                ),
-                Container(
-                  height: 25,
-                  width: 25,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.teal,
-                    border: Border.all(color: Colors.black,width: 2),
-                  ),
-                  alignment: Alignment.center,
-                  child: Icon(Icons.add,color: Colors.white,size: 20,),
-                ),
-                ]
+                    Container(
+                      height: 25,
+                      width: 25,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.teal,
+                        border: Border.all(color: Colors.black,width: 2),
+                      ),
+                      alignment: Alignment.center,
+                      child: Icon(Icons.add,color: Colors.white,size: 20,),
+                    ),
+                  ]
               ),
               title: Text("My status",style: TextStyle(fontSize: 18,color: Colors.white),),
               subtitle: Text("Tap to add status update",style: TextStyle(color: Colors.white38),),

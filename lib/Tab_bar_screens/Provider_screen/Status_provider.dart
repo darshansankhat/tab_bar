@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../Model_screen/Chat_model.dart';
 
-class Chat_provider extends ChangeNotifier
+class Status_provider extends ChangeNotifier
 {
-  List<Chat_data> NameList=[
+  List<Chat_data> StatusNameList=[
     Chat_data(img: "assets/image/chate_image/1.png",name: "Darshan Kumbhani 😎😎",tag: "I'm Busy"),
     Chat_data(img: "assets/image/chate_image/2.png",name: "Kaushik R n W 😀",tag: "AHIR........"),
     Chat_data(img: "assets/image/chate_image/3.png",name: "😎 Vivek tailor 😎",tag: "ENGINYER😎😎"),

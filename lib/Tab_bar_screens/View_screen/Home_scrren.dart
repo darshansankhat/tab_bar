@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tab_bar/Tab_bar_screens/View_screen/Calls_screen.dart';
+import 'package:tab_bar/Tab_bar_screens/View_screen/Chat_screen.dart';
+import 'package:tab_bar/Tab_bar_screens/View_screen/Community_screen.dart';
+import 'package:tab_bar/Tab_bar_screens/View_screen/Status_screen.dart';
 
 class Home_screen extends StatefulWidget {
   const Home_screen({Key? key}) : super(key: key);
@@ -12,6 +16,7 @@ class _Home_screenState extends State<Home_screen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
+      initialIndex: 1,
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
@@ -52,14 +57,20 @@ class _Home_screenState extends State<Home_screen> {
             bottom: TabBar(
               indicatorColor: Color(0xff075E55),
               tabs: [
-                Icon(Icons.groups,size: 30,color: Colors.white60,),
-                Text("Chats",style: TextStyle(fontSize: 18,color: Colors.white60),),
-                Text("Status",style: TextStyle(fontSize: 18,color: Colors.white60),),
-                Text("calls",style: TextStyle(fontSize: 18,color: Colors.white60),),
+                Tab(child: Center(child: Icon(Icons.groups,size: 30,color: Colors.white60,))),
+                Tab(child: Center(child: Text("Chats",style: TextStyle(fontSize: 18,color: Colors.white60),))),
+                Tab(child: Center(child: Text("Status.",style: TextStyle(fontSize: 18,color: Colors.white60),))),
+                Tab(child: Center(child: Text("calls",style: TextStyle(fontSize: 18,color: Colors.white60),))),
               ],
             ),
           ),
-          body: Container(),
+          backgroundColor: Colors.black87,
+          body: TabBarView(children: [
+            Community_screen(),
+            Chat_screen(),
+            Status_screen(),
+            Call_screen(),
+          ],),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
 

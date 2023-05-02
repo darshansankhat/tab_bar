@@ -11,7 +11,18 @@ class _Community_screenState extends State<Community_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("Community"),
+      backgroundColor: Colors.black87,
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.groups,size: 100,color: Colors.green.shade400,),
+            SizedBox(height: 20),
+            Text("Welcome to Community",style: TextStyle(fontSize: 25,color: Colors.white38),),
+          ],
+        ),
+      )
     );
   }
 }

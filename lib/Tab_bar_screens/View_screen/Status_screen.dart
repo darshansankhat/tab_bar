@@ -83,7 +83,6 @@ class _Status_screenState extends State<Status_screen> {
     return Container(
       height: 80,
       width: double.infinity,
-      color: Colors.black87,
       alignment: Alignment.center,
       child: ListTile(
         leading: Container(

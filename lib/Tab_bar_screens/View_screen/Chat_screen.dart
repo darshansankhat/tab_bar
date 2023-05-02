@@ -35,17 +35,9 @@ class _Chat_screenState extends State<Chat_screen> {
       color: Colors.black87,
       alignment: Alignment.center,
       child: ListTile(
-        leading: Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-          ),
-          alignment: Alignment.center,
-          child: CircleAvatar(
-              radius: 35,
-              backgroundImage: AssetImage("${providerF!.NameList[index].img}")),
-        ),
+        leading: CircleAvatar(
+            radius: 30,
+            backgroundImage: AssetImage("${providerF!.NameList[index].img}")),
         title: Text(
           "${providerF!.NameList[index].name}",
           style: TextStyle(fontSize: 18, color: Colors.white),
